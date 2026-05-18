@@ -1,4 +1,4 @@
-import java.util.scanner;
+import java.util.Scanner;
 
 public class AdiosJava {
 
@@ -6,34 +6,40 @@ public class AdiosJava {
         return a - b;
     }
 
-public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    
-    System.out.println("Escribe el número 1");
-    int numero1 = sc.nextInt();
+    public static void main(String[] args) {
+        
+        int numero1, numero2;
+        Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Escribe el segundo número 2");
-    int numero2 = sc.nextInt();
+        System.out.println("Escribe el numero 1: ");
+        numero1 = scanner.nextInt();
+        System.out.println("Escribe el numero 2: ");
+        numero2 = scanner.nextInt();
 
-    int resta = resta(numero1, numero2);
-    System.out.println("El resultado de la resta es: " + resta);
-    System.out.println("");
+        int resultado = numero1 + numero2;
+        System.out.println("El resultado de la suma es: " + resultado);
 
-    // clase persona 
+        int resta = resta(numero1, numero2);
+        System.out.println("El resultado de la resta es: " + resta);
 
-    Persona = persona1;
-    persona persona1 = new persona("Valentin", "Rocha", "Sanchez",);
+        System.out.println("");
 
-    persona1.setEdad(20);
-    persona1.settelefono(2472043336);
-    persona1.setDomicilio("Calle 5 de mayo");
+        //clase persona
 
-    System.out.println("======Datos de la persona=====" + persona1.toString());
-    System.out.println("");
+        Persona persona1;
+        persona1 = new Persona("Juan", "Perez", "Lopez"); 
+        persona1.setEdad(20);
+        persona1.settelefono("2472043336");
+        persona1.setDomicilio("Calle 5 de Mayo");
 
-    scanner.close();
+        System.out.println("====Datos de la persona====" + persona1.toString());
+        System.out.println("");
+        
+        scanner.close();
 
 
 
-    
-    
+
+        
+    }
+}
